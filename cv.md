@@ -5,9 +5,9 @@
 
 ## General information
 
-## name: **Dima** surname: **Xmiel**
+### name: **Dima** surname: **Xmiel**
 
-## Contact:
+### Contact:
 
 > - email: japost@wp.pl
 > - telegram: @xmelsky
