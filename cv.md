@@ -63,3 +63,17 @@ experience exchange. Meetups attendee.
   <dt>Russian/Ukrainian:</dt>
   <dd>Native speaker</dd>
 </dl>
+
+# Education
+
+- [The Rolling Scopes](https://rs.school/) School (JS/Front-End) Student
+
+- more to be added soon
+
+# Experience
+
+to be added soon
+
+# Code examples
+
+to be added soon
