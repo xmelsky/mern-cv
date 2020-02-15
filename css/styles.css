@@ -1,12 +1,171 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/oswald.woff2") format("woff2"),
+    url("./fonts/oswald.woff") format("woff"),
+    url("./fonts/oswald.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  background: #ded3bf url(../assets/bg.jpg) repeat 0 0;
   max-width: 1024px;
   margin: 0 auto;
   padding: 0;
+}
+
+a:link {
+  color: #4daaa7;
+  text-decoration: none;
+}
+a:visited {
+  color: #4daaa7;
+}
+a:hover {
+  color: #4daaa7;
+  text-decoration: underline;
+}
+a:active {
+  color: #4daaa7;
+}
+
+section {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px 0;
+  background: rgba(255, 255, 255, 0.6392156862745098);
+  max-width: 1004px;
+  transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 3px;
+  top: 0;
+  left: 0;
+  width: 0;
+  background: #4daaa7;
+  transition: width 300ms ease-out;
+  -webkit-transition: width 300ms ease-out;
+  -moz-transition: width 300ms ease-out;
+  -ms-transition: width 300ms ease-out;
+  -o-transition: width 300ms ease-out;
+  transition-delay: 0ms;
+}
+
+section h2 {
+  background: #f0d200;
+  color: #324b4b;
+  font: 150%/1 Oswald, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px 30px 6px 10px;
+  position: absolute;
+  left: -10px;
+  top: -16px;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  cursor: default;
+}
+
+section h2 em {
+  position: relative;
+  font-style: normal;
+  letter-spacing: 1px;
+  z-index: 10;
+  transition: color 350ms ease-in;
+  -webkit-transition: color 350ms ease-in;
+  -moz-transition: color 350ms ease-in;
+  -ms-transition: color 350ms ease-in;
+  -o-transition: color 350ms ease-in;
+  transition-delay: 300ms;
+}
+
+section h2 em:before {
+  position: relative;
+  font-style: normal;
+  z-index: 10;
+  transition: color 300ms ease-in;
+  -webkit-transition: color 300ms ease-in;
+  -moz-transition: color 300ms ease-in;
+  -ms-transition: color 300ms ease-in;
+  -o-transition: color 300ms ease-in;
+  transition-delay: 0ms;
+}
+
+section h2:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 0;
+  background: #4daaa7;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  transition: width 300ms ease-in;
+  -webkit-transition: width 300ms ease-in;
+  -moz-transition: width 300ms ease-in;
+  -ms-transition: width 300ms ease-in;
+  -o-transition: width 300ms ease-in;
+  transition-delay: 300ms;
+}
+
+section:hover {
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+}
+
+section:hover:before {
+  width: 100%;
+  transition-delay: 400ms;
+}
+
+section:hover h2::after {
+  width: 100%;
+  transition-delay: 0ms;
+}
+
+section:hover h2 em {
+  color: #fff;
+  transition-delay: 0ms;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  font: 110%/1 Oswald, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.flexbox > p {
+  display: block;
+  margin: 10px;
+}
+
+.flexbox.table {
+  flex-direction: column;
+}
+
+.flexbox.table li {
+  margin: 10px 0;
+  line-height: 20px;
 }
 
 ul {
@@ -26,7 +185,7 @@ ul {
 
 .badges img {
   width: auto;
-  max-height: 35px;
+  max-height: 25px;
   min-height: 16px;
   height: 5vw;
 }
@@ -80,7 +239,8 @@ header h2 {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    background: red;
+    background: #f8f8f8;
+    color: #000;
     padding: 8px 10px;
   }
 }
@@ -92,13 +252,20 @@ header h2 {
 
   header h2 {
     padding: 0;
+    font-size: 110%;
     background: none;
     top: 100%;
     left: 50%;
+    color: #fff;
     transform: translate(-50%, 50%);
     -webkit-transform: translate(-50%, 50%);
     -moz-transform: translate(-50%, 50%);
     -ms-transform: translate(-50%, 50%);
     -o-transform: translate(-50%, 50%);
+  }
+
+  section h2 {
+    font-size: 110%;
+    top: -14px;
   }
 }
