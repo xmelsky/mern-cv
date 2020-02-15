@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.badges li {
+  margin: 5px;
+}
+
+.badges img {
+  width: auto;
+  max-height: 35px;
+  min-height: 16px;
+  height: 5vw;
+}
+
+header {
+  text-align: center;
+  border-top: 3px solid #f0d200;
+  padding: 40px 0;
+  background: url(../assets/bg-header.png) repeat-x left bottom;
+}
+
+hgroup {
+  position: relative;
+}
+
+header h1 {
+  font: 850%/1 Impact, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  color: #324b4b;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+header h1 em {
+  font-style: normal;
+  color: #f0d200;
+  text-shadow: 0 1px 0 rgba(0, 50, 40, 0.5), 0 -1px 0 rgba(255, 255, 0, 0.8);
+}
+
+header h2 {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font: 150%/1 Impact, Helvetica, sans-serif;
+  color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+  -moz-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+}
+
+@media screen and (max-width: 670px) {
+  header h2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background: red;
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header h1 {
+    font: 350%/1 Impact, Helvetica, sans-serif;
+  }
+
+  header h2 {
+    padding: 0;
+    background: none;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+  }
+}
