@@ -27,7 +27,6 @@ window.onload = function() {
 let scrollAnimation;
 
 function scrollToTop() {
-  console.log("animation goes on");
   const position =
     document.body.scrollTop || document.documentElement.scrollTop;
   if (position) {
